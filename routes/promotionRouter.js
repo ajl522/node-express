@@ -39,9 +39,10 @@ promotionRouter
       `Will add the promotion: ${req.body.name} with description: ${req.body.description}`
     );
   })
-  .put((req, res) => {
-    res.statusCode = 403;
-    res.end("PUT operation not supported on /promotions");
+  .put("/promotions/:promotionId", (req, res) => {
+    res.write(`Updating the promotion: ${req.params.promotionId}\n`);
+    res.end(`Will update the promotion: ${req.body.name}
+        with description: ${req.body.description}`);
   })
   .delete((req, res) => {
     res.end("Deleting all promotions");
