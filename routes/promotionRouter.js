@@ -39,7 +39,7 @@ promotionRouter
       `Will add the promotion: ${req.body.name} with description: ${req.body.description}`
     );
   })
-  .put("/promotions/:promotionId", (req, res) => {
+  .put((req, res) => {
     res.write(`Updating the promotion: ${req.params.promotionId}\n`);
     res.end(`Will update the promotion: ${req.body.name}
         with description: ${req.body.description}`);

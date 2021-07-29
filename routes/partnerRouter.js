@@ -39,7 +39,7 @@ partnerRouter
       `Will add the partner: ${req.body.name} with description: ${req.body.description}`
     );
   })
-  .put("/partners/:partnerId", (req, res) => {
+  .put((req, res) => {
     res.write(`Updating the partner: ${req.params.partnerId}\n`);
     res.end(`Will update the partner: ${req.body.name}
         with description: ${req.body.description}`);
